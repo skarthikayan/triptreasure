@@ -9,7 +9,7 @@ const Button = (props: PropsWithChildren<Props>) => (
   <button
     type="button"
     className={clsx(
-      "rounded-3xl shadow-lg flex flex-row gap-2 py-3 px-5 text-sm justify-center items-center font-bold max-w-60",
+      "rounded-3xl shadow-lg flex flex-row gap-2 py-3 px-5 text-sm justify-center items-center font-bold ",
       props.className
     )}
   >
