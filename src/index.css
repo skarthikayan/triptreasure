@@ -9,6 +9,7 @@
     --color-text-title: #191825;
     --color-text-section-title: #f85e9f;
     --color-bg-button: #5d50c6;
+    --color-grey: rgba(25, 24, 37, 0.1);
     scroll-behavior: smooth;
   }
 }

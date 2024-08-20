@@ -1,16 +1,18 @@
 import GettingStarted from "./GettingStarted";
-// import TravelPoint from "./TravelPoint";
-// import TopDestinations from "./TopDestinations";
-// import Services from "./Services";
+import Testimonial from "./Testimonial";
+import Features from "./Features";
+import Services from "./Services";
+import NewsTeller from "./Newteller";
 
 function Home() {
   return (
-    <>
+    <main>
       <GettingStarted />
-      {/* <Services />
-      <TopDestinations />
-      <TravelPoint /> */}
-    </>
+      <Services />
+      <Features />
+      <Testimonial />
+      <NewsTeller />
+    </main>
   );
 }
 

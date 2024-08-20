@@ -1,7 +1,6 @@
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import SpecialDeals from "./pages/SpecialDeals";
-import ContactUs from "./pages/ContactUs";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
@@ -21,12 +20,8 @@ function App() {
           element: <Discover />,
         },
         {
-          path: "deals",
+          path: "travel-point",
           element: <SpecialDeals />,
-        },
-        {
-          path: "contact",
-          element: <ContactUs />,
         },
         {
           path: "login",

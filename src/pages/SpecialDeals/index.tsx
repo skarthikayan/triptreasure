@@ -1,5 +1,6 @@
+import TravelPoint from "./TravelPoint";
 function SpecialDeals() {
-  return <div>SpecialDeals</div>;
+  return <TravelPoint />;
 }
 
 export default SpecialDeals;

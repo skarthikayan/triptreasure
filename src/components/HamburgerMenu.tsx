@@ -19,7 +19,7 @@ const HamburgerMenu = (props: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   useClickOutside(ref, () => setShowNavMenu(false));
   return (
-    <div className="sm:hidden" ref={ref}>
+    <div className="sm:hidden z-20" ref={ref}>
       <HamburgerMenuIcon
         className="sm:hidden block"
         onClick={() => setShowNavMenu((prev) => !prev)}
@@ -40,6 +40,9 @@ const HamburgerMenu = (props: Props) => {
                 </NavLink>
               </li>
             ))}
+            <li className="p-4 border-b-2 text-left">
+              <a href={`#contact`}>Contact Us</a>
+            </li>
           </ul>
           <ul className="flex flex-row gap-8 items-center p-4 w-full justify-center">
             <li className="font-bold text-black">

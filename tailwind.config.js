@@ -9,6 +9,7 @@ export default {
         textTitle: "var(--color-text-title)",
         sectionTitle: "var(--color-text-section-title)",
         buttonBg: "var(--color-bg-button)",
+        colorGrey: "var(--color-grey)",
       },
     },
   },
