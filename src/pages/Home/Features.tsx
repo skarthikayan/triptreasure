@@ -1,4 +1,4 @@
-import FeaturesImage from "../../assets/features.svg?react";
+import FeaturesImage from "../../assets/features.svg";
 import Coupon from "../../assets/coupon.svg?react";
 import Location from "../../assets/location.svg?react";
 import Calender from "../../assets/calender.svg?react";
@@ -49,7 +49,7 @@ function Features() {
           </motion.div>
         </div>
       </div>
-      <FeaturesImage className="w-full h-full p-8  sm:w-1/2" />
+      <img src={FeaturesImage} alt="Features image" loading="lazy" />
     </section>
   );
 }

@@ -22,7 +22,7 @@ function Header() {
         >
           <Logo />
           <span className="font-bold text-textTitle text-2xl">
-            TripTreasure
+            Triptreasure
           </span>
         </Link>
         <ul className="sm:flex sm:flex-row hidden gap-5 font-bold items-center">
@@ -43,10 +43,12 @@ function Header() {
         </ul>
         <ul className="sm:flex sm:flex-row hidden gap-4 items-center">
           <li className="font-bold text-black">
-            <Link to={`${import.meta.env.BASE_URL}/login`}>Login</Link>
+            <Link to={`${import.meta.env.BASE_URL}/user?action=login`}>
+              Login
+            </Link>
           </li>
           <li>
-            <Link to={`${import.meta.env.BASE_URL}/signup`}>
+            <Link to={`${import.meta.env.BASE_URL}/user?action=signup`}>
               <Button className="bg-buttonBg text-white">Sign Up</Button>
             </Link>
           </li>

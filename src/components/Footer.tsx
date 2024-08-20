@@ -16,7 +16,7 @@ function Footer() {
         className="flex justify-center items-center gap-2"
       >
         <Logo />
-        <span className="font-bold text-textTitle text-2xl">TripTreasure</span>
+        <span className="font-bold text-textTitle text-2xl">Triptreasure</span>
       </Link>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It

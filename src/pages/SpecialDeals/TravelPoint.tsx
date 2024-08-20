@@ -1,10 +1,15 @@
-import TravelPointImage from "../../assets/travel-point.svg?react";
+import TravelPointImage from "../../assets/travel-point.svg";
 import { motion } from "framer-motion";
 
 function TravelPoint() {
   return (
     <section className="flex sm:flex-row flex-col width-full justify-between items-start  gap-3 sm:px-28 px-4 py-12 relative overflow-hidden z-10">
-      <TravelPointImage className="w-full h-full p-8  sm:w-1/2" />
+      <img
+        src={TravelPointImage}
+        alt="Travel point image"
+        loading="lazy"
+        className="w-full h-full px-8  sm:w-3/5"
+      />
 
       <div className="flex flex-col max-w-md min-h-96 sm:justify-between sm:items-start justify-center items-center gap-8">
         <div className="flex flex-col  min-w-80  justify-center items-start gap-4">

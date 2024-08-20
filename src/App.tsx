@@ -1,7 +1,6 @@
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import SpecialDeals from "./pages/SpecialDeals";
-import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
 import AppLayout from "./components/AppLayout";
@@ -24,12 +23,8 @@ function App() {
           element: <SpecialDeals />,
         },
         {
-          path: "login",
+          path: "user",
           element: <Login />,
-        },
-        {
-          path: "signup",
-          element: <Signup />,
         },
         {
           path: "",
