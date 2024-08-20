@@ -15,12 +15,12 @@ function NewsTeller() {
       <h2 className="text-textTitle sm:text-4xl text-3xl font-bold leading-none text-center sm:w-1/2">
         Prepare yourself & let's explore the beauty of the world
       </h2>
-      <div className="flex sm:fex-row flex-col gap-4 sm:w-2/4 w-full ">
+      <div className="flex  flex-col items-center gap-4 sm:w-2/4 w-full ">
         <div className="bg-white p-3 rouded flex flex-row itemes-center justify-start w-full">
           <Mail />
           <input placeholder="Your Email" className="bg-white mx-4" />
         </div>
-        <Button className="text-sectionTitle text-white bg-buttonBg">
+        <Button className="text-sectionTitle text-white bg-buttonBg sm:w-1/2 w-full">
           Subscribe
         </Button>
       </div>

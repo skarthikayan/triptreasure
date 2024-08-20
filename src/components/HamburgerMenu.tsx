@@ -46,10 +46,12 @@ const HamburgerMenu = (props: Props) => {
           </ul>
           <ul className="flex flex-row gap-8 items-center p-4 w-full justify-center">
             <li className="font-bold text-black">
-              <Link to={`${import.meta.env.BASE_URL}/login`}>Login</Link>
+              <Link to={`${import.meta.env.BASE_URL}/user?action=login`}>
+                Login
+              </Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}/signup`}>
+              <Link to={`${import.meta.env.BASE_URL}/user?action=signup`}>
                 <Button className="bg-buttonBg text-white">Sign Up</Button>
               </Link>
             </li>

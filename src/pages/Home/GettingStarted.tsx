@@ -1,4 +1,5 @@
-import GettingStartedImage from "../../assets/getting-started.svg?react";
+import GettingStartedImage2 from "../../assets/getting-started.svg";
+
 import Bg from "../../assets/getting-started-bg.svg?react";
 
 import Explore from "../../assets/explore.svg?react";
@@ -32,7 +33,11 @@ function GettingStarted() {
           </Button>
         </div>
       </div>
-      <GettingStartedImage className="w-full h-full" />
+      <img
+        src={GettingStartedImage2}
+        alt="getting started image"
+        loading="lazy"
+      />
     </section>
   );
 }
