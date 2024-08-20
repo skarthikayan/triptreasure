@@ -7,12 +7,14 @@ function Header() {
   const menuItems = [
     { label: "Home", route: import.meta.env.BASE_URL },
     { label: "Discover", route: `${import.meta.env.BASE_URL}/discover` },
-    { label: "Special Deals", route: `${import.meta.env.BASE_URL}/deals` },
-    { label: "Contact Us", route: `${import.meta.env.BASE_URL}/contact` },
+    {
+      label: "Travel Point",
+      route: `${import.meta.env.BASE_URL}/travel-point`,
+    },
   ];
 
   return (
-    <>
+    <header>
       <nav className="flex w-full p-4 sm:py-8 sm:px-28 justify-between text-sm items-center">
         <Link
           to={`${import.meta.env.BASE_URL}`}
@@ -35,6 +37,9 @@ function Header() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <a href={`#contact`}>Contact Us</a>
+          </li>
         </ul>
         <ul className="sm:flex sm:flex-row hidden gap-4 items-center">
           <li className="font-bold text-black">
@@ -48,7 +53,7 @@ function Header() {
         </ul>
         <HamburgerMenu menuItems={menuItems} />
       </nav>
-    </>
+    </header>
   );
 }
 

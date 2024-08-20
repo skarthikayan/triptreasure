@@ -1,5 +1,6 @@
+import TopDestinations from "./TopDestinations";
 function Discover() {
-  return <div>Discover</div>;
+  return <TopDestinations />;
 }
 
 export default Discover;
