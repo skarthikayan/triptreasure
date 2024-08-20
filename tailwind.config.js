@@ -10,6 +10,7 @@ export default {
         sectionTitle: "var(--color-text-section-title)",
         buttonBg: "var(--color-bg-button)",
         colorGrey: "var(--color-grey)",
+        colorYellow: "var(--color-bg-yellow)",
       },
     },
   },

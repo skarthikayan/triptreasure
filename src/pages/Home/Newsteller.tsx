@@ -5,7 +5,7 @@ import Button from "../../components/Button";
 function NewsTeller() {
   return (
     <section
-      className={`bg-yellow-50  flex flex-col justify-between items-center  gap-10  mx-4 px-4 py-8 sm:mx-32 sm:mt-40 sm:py-32 sm:px-16  overflow-visible rounded relative`}
+      className={`bg-colorYellow  flex flex-col justify-between items-center  gap-10  mx-4 px-4 py-8 sm:mx-32 sm:mt-40 sm:py-32 sm:px-16  overflow-visible rounded relative`}
     >
       <Bg className="hidden sm:block absolute -top-10 -left-10 z-0 " />
 
