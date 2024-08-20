@@ -19,7 +19,7 @@ function TopDestinations() {
         <div />
       </div>
 
-      <div className="flex sm:flex-row flex-col justify-start items-center gap-28 w-full  py-8 z-10">
+      <div className="flex sm:flex-row flex-col justify-start items-center sm:gap-28 gap-8 w-full  py-8 z-10">
         <Card className="flex flex-col items-start justify-center  text-center ">
           <img
             src={romeImage}

@@ -30,6 +30,7 @@ const HamburgerMenu = (props: Props) => {
             {menuItems.map((item) => (
               <li key={item.label} className="p-4 border-b-2 text-left">
                 <NavLink
+                  onClick={() => setShowNavMenu(false)}
                   end={true}
                   to={item.route}
                   className={({ isActive }) =>
@@ -41,17 +42,27 @@ const HamburgerMenu = (props: Props) => {
               </li>
             ))}
             <li className="p-4 border-b-2 text-left">
-              <a href={`#contact`}>Contact Us</a>
+              <a onClick={() => setShowNavMenu(false)} href={`#contact`}>
+                Contact Us
+              </a>
             </li>
           </ul>
           <ul className="flex flex-row gap-8 items-center p-4 w-full justify-center">
             <li className="font-bold text-black">
-              <Link to={`${import.meta.env.BASE_URL}/user?action=login`}>
+              <Link
+                className="block px-4"
+                onClick={() => setShowNavMenu(false)}
+                to={`${import.meta.env.BASE_URL}/user?action=login`}
+              >
                 Login
               </Link>
             </li>
             <li>
-              <Link to={`${import.meta.env.BASE_URL}/user?action=signup`}>
+              <Link
+                className="block px-4"
+                onClick={() => setShowNavMenu(false)}
+                to={`${import.meta.env.BASE_URL}/user?action=signup`}
+              >
                 <Button className="bg-buttonBg text-white">Sign Up</Button>
               </Link>
             </li>

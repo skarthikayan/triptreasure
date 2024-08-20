@@ -5,10 +5,11 @@
 @layer base {
   html {
     --color-primary: #ffffff;
-    --color-text-primary: rgba(25, 24, 37, 0.5);
+    --color-text-primary: #7070a3;
     --color-text-title: #191825;
-    --color-text-section-title: #f85e9f;
+    --color-text-section-title: #e6005a;
     --color-bg-button: #5d50c6;
+    --color-bg-yellow: #fefde1;
     --color-grey: rgba(25, 24, 37, 0.1);
     scroll-behavior: smooth;
   }

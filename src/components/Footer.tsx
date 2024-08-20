@@ -29,19 +29,19 @@ function Footer() {
       </div>
       <div className="flex flex-col sm:flex-row justify-start sm:items-center w-full sm:gap-96">
         <div>
-          <h4 className="text-black font-bold my-4">Company</h4>
+          <p className="text-black font-bold my-4">Company</p>
           <p>About</p>
           <p>Career</p>
           <p>Mobile</p>
         </div>
         <div>
-          <h4 className="text-black font-bold my-4">Blogs</h4>
+          <p className="text-black font-bold my-4">Blogs</p>
           <p>Why Us?</p>
           <p>FAQs</p>
           <p>History</p>
         </div>
         <div>
-          <h4 className="text-black font-bold my-4">Contact Us</h4>
+          <p className="text-black font-bold my-4">Contact Us</p>
           <address>
             <p>+00 989898</p>
             <p>info@triptreasure.com</p>

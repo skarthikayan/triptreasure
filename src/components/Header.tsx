@@ -41,15 +41,21 @@ function Header() {
             <a href={`#contact`}>Contact Us</a>
           </li>
         </ul>
-        <ul className="sm:flex sm:flex-row hidden gap-4 items-center">
-          <li className="font-bold text-black">
-            <Link to={`${import.meta.env.BASE_URL}/user?action=login`}>
+        <ul className="sm:flex sm:flex-row hidden gap-6 items-center">
+          <li className="font-bold text-black p-4">
+            <Link
+              className="block px-4 py-2"
+              to={`${import.meta.env.BASE_URL}/user?action=login`}
+            >
               Login
             </Link>
           </li>
           <li>
-            <Link to={`${import.meta.env.BASE_URL}/user?action=signup`}>
-              <Button className="bg-buttonBg text-white">Sign Up</Button>
+            <Link
+              className="block px-4 py-2"
+              to={`${import.meta.env.BASE_URL}/user?action=signup`}
+            >
+              <Button className="bg-buttonBg text-white ">Sign Up</Button>
             </Link>
           </li>
         </ul>
