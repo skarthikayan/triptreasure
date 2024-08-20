@@ -1,5 +1,5 @@
 import Bg from "../../assets/testimonial-bg.svg?react";
-import Client from "../../assets/client.svg?react";
+import Client from "../../assets/client.png";
 
 function Testimonial() {
   return (
@@ -13,7 +13,8 @@ function Testimonial() {
       <h2 className="text-textTitle sm:text-4xl text-3xl font-bold leading-none">
         Trust our Clients
       </h2>
-      <Client />
+      {/* <Client /> */}
+      <img src={Client} alt="client image" height={128} width={128} />
       <p className="text-xl font-bold">
         <span className="text-sectionTitle ">Mark Smith</span>{" "}
         <span>/ Travel Enthusiast</span>

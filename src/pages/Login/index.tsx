@@ -1,4 +1,4 @@
-import LoginImage from "../../assets/login.svg";
+import LoginImage from "../../assets/login.png";
 import User from "../../assets/user.svg?react";
 import Password from "../../assets/password.svg?react";
 import { useState } from "react";
@@ -17,8 +17,9 @@ function Login() {
       <img
         src={LoginImage}
         alt="Login  image"
-        loading="lazy"
         className="w-full px-8 sm:w-2/5 rounded"
+        height={575}
+        width={374}
       />
 
       <div className="flex flex-col max-w-md sm:min-h-96 sm:justify-evenly sm:items-start justify-start items-center gap-6  w-full shadow-lg p-8">

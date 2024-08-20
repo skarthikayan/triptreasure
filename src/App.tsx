@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
-import SpecialDeals from "./pages/SpecialDeals";
+import TravelPoint from "./pages/TravelPoint";
 import Login from "./pages/Login";
 
 import AppLayout from "./components/AppLayout";
@@ -20,7 +20,7 @@ function App() {
         },
         {
           path: "travel-point",
-          element: <SpecialDeals />,
+          element: <TravelPoint />,
         },
         {
           path: "user",

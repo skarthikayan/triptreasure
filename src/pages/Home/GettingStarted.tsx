@@ -1,4 +1,4 @@
-import GettingStartedImage2 from "../../assets/getting-started.svg";
+import GettingStartedImage from "../../assets/getting-started.png";
 
 import Bg from "../../assets/getting-started-bg.svg?react";
 
@@ -34,9 +34,10 @@ function GettingStarted() {
         </div>
       </div>
       <img
-        src={GettingStartedImage2}
+        src={GettingStartedImage}
         alt="getting started image"
-        loading="lazy"
+        height={575}
+        width={374}
       />
     </section>
   );
