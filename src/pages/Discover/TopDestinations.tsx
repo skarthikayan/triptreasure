@@ -1,6 +1,6 @@
-import UaeImage from "../../assets/uae.svg?react";
-import MaldivesImage from "../../assets/maldives.svg?react";
-import RomeImage from "../../assets/rome.svg?react";
+import uaeImage from "../../assets/uae.png";
+import maldivesImage from "../../assets/maldives.png";
+import romeImage from "../../assets/rome.png";
 
 import Card from "../../components/Card";
 
@@ -21,7 +21,12 @@ function TopDestinations() {
 
       <div className="flex sm:flex-row flex-col justify-start items-center gap-28 w-full  py-8 z-10">
         <Card className="flex flex-col items-start justify-center  text-center ">
-          <RomeImage className="w-full h-full m-0 p-0" />
+          <img
+            src={romeImage}
+            className="w-full h-full m-0 p-0"
+            height={575}
+            width={374}
+          />
           <div className="flex flex-row gap-3 px-4 py-2">
             <h3 className="text-textTitle font-bold">
               Paradise Beach, Bantayan Island
@@ -33,7 +38,12 @@ function TopDestinations() {
           <p className="px-4  py-2">4.5 ⭐</p>
         </Card>
         <Card className="flex flex-col items-start justify-center  text-center ">
-          <MaldivesImage className="w-full h-full m-0 p-0" />
+          <img
+            src={maldivesImage}
+            className="w-full h-full m-0 p-0"
+            height={575}
+            width={374}
+          />
           <div className="flex flex-row gap-3 px-4 py-2">
             <h3 className="text-textTitle font-bold">
               Ocean with full of Colors
@@ -45,7 +55,13 @@ function TopDestinations() {
           <p className="px-4  py-2">4.5 ⭐</p>
         </Card>
         <Card className="flex flex-col items-start justify-center  text-center ">
-          <UaeImage className="w-full h-full m-0 p-0" />
+          <img
+            src={uaeImage}
+            alt="uae image"
+            className="w-full h-full m-0 p-0"
+            height={575}
+            width={374}
+          />
           <div className="flex flex-row gap-3 px-4 py-2">
             <h3 className="text-textTitle font-bold">
               Mountain View, Above the cloud
