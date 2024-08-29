@@ -1,11 +1,13 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import TravelPoint from "./pages/TravelPoint";
 import Login from "./pages/Login";
 
 import AppLayout from "./components/AppLayout";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
   const router = createBrowserRouter([
@@ -33,7 +35,12 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <ToastContainer />
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

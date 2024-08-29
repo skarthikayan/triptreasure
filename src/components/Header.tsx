@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <header>
-      <nav className="flex w-full p-4 sm:py-8 sm:px-28 justify-between text-sm items-center">
+      <nav className="flex w-full p-4 lg:py-8 lg:px-28 justify-between text-sm items-center">
         <Link
           to={`${import.meta.env.BASE_URL}`}
           className="flex justify-center items-center gap-2"
@@ -25,7 +25,7 @@ function Header() {
             Triptreasure
           </span>
         </Link>
-        <ul className="sm:flex sm:flex-row hidden gap-5 font-bold items-center">
+        <ul className="lg:flex lg:flex-row hidden gap-5 font-bold items-center">
           {menuItems.map((item) => (
             <li key={item.label}>
               <NavLink
@@ -41,7 +41,7 @@ function Header() {
             <a href={`#contact`}>Contact Us</a>
           </li>
         </ul>
-        <ul className="sm:flex sm:flex-row hidden gap-6 items-center">
+        <ul className="lg:flex lg:flex-row hidden gap-6 items-center">
           <li className="font-bold text-black p-4">
             <Link
               className="block px-4 py-2"
@@ -55,7 +55,12 @@ function Header() {
               className="block px-4 py-2"
               to={`${import.meta.env.BASE_URL}/user?action=signup`}
             >
-              <Button className="bg-buttonBg text-white ">Sign Up</Button>
+              <Button
+                showDefaultPopup={false}
+                className="bg-buttonBg text-white "
+              >
+                Sign Up
+              </Button>
             </Link>
           </li>
         </ul>
