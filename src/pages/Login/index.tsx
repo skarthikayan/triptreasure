@@ -1,7 +1,7 @@
 import LoginImage from "../../assets/login.png";
 import User from "../../assets/user.svg?react";
 import Password from "../../assets/password.svg?react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { useSearchParams } from "react-router-dom";
 
@@ -11,7 +11,6 @@ function Login() {
   const [searchParams] = useSearchParams();
   let action = searchParams.get("action") ?? "login";
   if (!["login", "signup"].includes(action)) action = "login";
-  const [activeTab, setActiveTab] = useState(action);
   return (
     <section className="flex sm:flex-row flex-col width-full justify-evenly items-start  sm:gap-20 sm:px-20  px-4 py-12">
       <img
@@ -24,23 +23,8 @@ function Login() {
 
       <div className="flex flex-col max-w-md sm:min-h-96 sm:justify-evenly sm:items-start justify-start items-center gap-6  w-full shadow-lg p-8">
         <div className="flex flex-row gap-4">
-          <h2
-            onClick={() => setActiveTab("login")}
-            className={clsx(
-              activeTab === "login" && "text-sectionTitle",
-              "sm:text-xl text-base font-bold tracking-wider cursor-pointer"
-            )}
-          >
-            Login
-          </h2>
-          <h2
-            onClick={() => setActiveTab("signup")}
-            className={clsx(
-              activeTab === "signup" && "text-sectionTitle",
-              "sm:text-xl text-base font-bold tracking-wider cursor-pointer"
-            )}
-          >
-            Sign Up
+          <h2 className="text-sectionTitle sm:text-xl text-base font-bold tracking-wider cursor-pointer">
+            {action === "login" ? "Login" : "Sign Up"}
           </h2>
         </div>
 
@@ -61,7 +45,7 @@ function Login() {
               className="bg-white mx-4 outline-none"
             />
           </div>
-          {activeTab === "signup" && (
+          {action === "signup" && (
             <div className="bg-white p-3 rouded flex flex-row itemes-center justify-start w-full border-b-2 focus-within:border-buttonBg">
               <Password />
               <input
@@ -72,7 +56,7 @@ function Login() {
             </div>
           )}
           <Button className="text-sectionTitle text-white bg-buttonBg capitalize">
-            {activeTab}
+            {action}
           </Button>
         </form>
       </div>

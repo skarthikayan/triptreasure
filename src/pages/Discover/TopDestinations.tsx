@@ -6,20 +6,17 @@ import Card from "../../components/Card";
 
 function TopDestinations() {
   return (
-    <div className="flex flex-col  width-full justify-between items-center  gap-3 sm:px-28 px-4 py-8 relative overflow-hidden">
-      <div className="flex flex-row  justify-between items-center w-full">
-        <div className="flex flex-col  min-w-80  justify-center items-start gap-4">
-          <h2 className="text-sectionTitle sm:text-xl text-base font-bold tracking-wider">
-            TOP DESTINATIONS
-          </h2>
-          <h1 className="text-textTitle sm:text-4xl text-3xl font-bold leading-none">
-            Explore top destinations
-          </h1>
-        </div>
-        <div />
+    <div className="flex flex-col  width-full justify-between items-center lg:items-start  gap-3 lg:px-28 px-4 py-8 relative overflow-hidden">
+      <div className="flex flex-col min-w-80  justify-center lg:items-start items-center gap-4">
+        <h2 className="text-sectionTitle lg:text-xl text-base font-bold tracking-wider">
+          TOP DESTINATIONS
+        </h2>
+        <h1 className="text-textTitle lg:text-4xl text-3xl font-bold leading-none">
+          Explore top destinations
+        </h1>
       </div>
 
-      <div className="flex sm:flex-row flex-col justify-start items-center sm:gap-28 gap-8 w-full  py-8 z-10">
+      <div className="flex lg:flex-row flex-col justify-start items-center lg:gap-28 gap-8 w-full  py-8 z-10">
         <Card className="flex flex-col items-start justify-center  text-center ">
           <img
             src={romeImage}

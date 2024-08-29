@@ -19,13 +19,13 @@ const HamburgerMenu = (props: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   useClickOutside(ref, () => setShowNavMenu(false));
   return (
-    <div className="sm:hidden z-20" ref={ref}>
+    <div className="lg:hidden z-20" ref={ref}>
       <HamburgerMenuIcon
-        className="sm:hidden block"
+        className="lg:hidden block"
         onClick={() => setShowNavMenu((prev) => !prev)}
       />
       {showNavMenu && (
-        <div className="sm:hidden flex flex-col border-2 w-2/3 absolute right-0 top-20 z-10 bg-white shadow-sm items-start justify-evenly">
+        <div className="lg:hidden flex flex-col border-2 w-2/3 absolute right-0 top-20 z-10 bg-white shadow-sm items-start justify-evenly">
           <ul className=" gap-5 font-bold items-center  w-full">
             {menuItems.map((item) => (
               <li key={item.label} className="p-4 border-b-2 text-left">
@@ -63,7 +63,12 @@ const HamburgerMenu = (props: Props) => {
                 onClick={() => setShowNavMenu(false)}
                 to={`${import.meta.env.BASE_URL}/user?action=signup`}
               >
-                <Button className="bg-buttonBg text-white">Sign Up</Button>
+                <Button
+                  showDefaultPopup={false}
+                  className="bg-buttonBg text-white"
+                >
+                  Sign Up
+                </Button>
               </Link>
             </li>
           </ul>

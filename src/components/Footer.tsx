@@ -22,28 +22,28 @@ function Footer() {
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC.
       </p>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 cursor-pointer">
         <Facebook />
         <Instagram />
         <Twitter />
       </div>
-      <div className="flex flex-col sm:flex-row justify-start sm:items-center w-full sm:gap-96">
+      <div className="flex flex-col sm:flex-row justify-start sm:items-center w-full sm:justify-between ">
         <div>
           <p className="text-black font-bold my-4">Company</p>
-          <p>About</p>
-          <p>Career</p>
-          <p>Mobile</p>
+          <p className="cursor-pointer hover:underline">About</p>
+          <p className="cursor-pointer hover:underline">Career</p>
+          <p className="cursor-pointer hover:underline">Mobile</p>
         </div>
         <div>
           <p className="text-black font-bold my-4">Blogs</p>
-          <p>Why Us?</p>
-          <p>FAQs</p>
-          <p>History</p>
+          <p className="cursor-pointer hover:underline">Why Us?</p>
+          <p className="cursor-pointer hover:underline">FAQs</p>
+          <p className="cursor-pointer hover:underline">History</p>
         </div>
         <div>
           <p className="text-black font-bold my-4">Contact Us</p>
-          <address>
-            <p>+00 989898</p>
+          <address className="not-italic">
+            <p>+91 9898989898 </p>
             <p>info@triptreasure.com</p>
             <p>#7, 8th Street, Chennai, India - 9 </p>
           </address>
