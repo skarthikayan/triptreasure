@@ -1,11 +1,16 @@
+import { Link } from "react-router-dom";
+
 import Facebook from "../assets/facebook.svg?react";
 import Twitter from "../assets/twitter.svg?react";
 import Instagram from "../assets/instagram.svg?react";
-
-import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg?react";
 
+import appConstants from "../constants/appConstants";
+
 function Footer() {
+  const companyLinks = ["About", "Carrer", "Mobile"];
+  const blogs = ["Why us?", "FAQs", "History"];
+
   return (
     <footer
       id="contact"
@@ -16,7 +21,9 @@ function Footer() {
         className="flex justify-center items-center gap-2"
       >
         <Logo />
-        <span className="font-bold text-textTitle text-2xl">Triptreasure</span>
+        <span className="font-bold text-textTitle text-2xl">
+          {appConstants.appTitle}
+        </span>
       </Link>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -30,15 +37,15 @@ function Footer() {
       <div className="flex flex-col sm:flex-row justify-start sm:items-center w-full sm:justify-between ">
         <div>
           <p className="text-black font-bold my-4">Company</p>
-          <p className="cursor-pointer hover:underline">About</p>
-          <p className="cursor-pointer hover:underline">Career</p>
-          <p className="cursor-pointer hover:underline">Mobile</p>
+          {companyLinks.map((linkItem) => (
+            <p className="cursor-pointer hover:underline">{linkItem}</p>
+          ))}
         </div>
         <div>
           <p className="text-black font-bold my-4">Blogs</p>
-          <p className="cursor-pointer hover:underline">Why Us?</p>
-          <p className="cursor-pointer hover:underline">FAQs</p>
-          <p className="cursor-pointer hover:underline">History</p>
+          {blogs.map((blog) => (
+            <p className="cursor-pointer hover:underline">{blog}</p>
+          ))}
         </div>
         <div>
           <p className="text-black font-bold my-4">Contact Us</p>

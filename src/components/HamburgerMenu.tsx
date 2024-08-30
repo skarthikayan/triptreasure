@@ -25,7 +25,7 @@ const HamburgerMenu = (props: Props) => {
         onClick={() => setShowNavMenu((prev) => !prev)}
       />
       {showNavMenu && (
-        <div className="lg:hidden flex flex-col border-2 w-2/3 absolute right-0 top-20 z-10 bg-white shadow-sm items-start justify-evenly">
+        <div className="lg:hidden flex flex-col border-2 w-5/6 max-w-sm absolute right-0 top-20 z-10 bg-white shadow-sm items-start justify-evenly">
           <ul className=" gap-5 font-bold items-center  w-full">
             {menuItems.map((item) => (
               <li key={item.label} className="p-4 border-b-2 text-left">

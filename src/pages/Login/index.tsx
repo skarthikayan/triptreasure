@@ -1,9 +1,8 @@
+import { useSearchParams } from "react-router-dom";
+
 import LoginImage from "../../assets/login.png";
 import User from "../../assets/user.svg?react";
 import Password from "../../assets/password.svg?react";
-import { useEffect, useState } from "react";
-import clsx from "clsx";
-import { useSearchParams } from "react-router-dom";
 
 import Button from "../../components/Button";
 
@@ -15,7 +14,7 @@ function Login() {
     <section className="flex sm:flex-row flex-col width-full justify-evenly items-start  sm:gap-20 sm:px-20  px-4 py-12">
       <img
         src={LoginImage}
-        alt="Login  image"
+        alt="Login image"
         className="w-full px-8 sm:w-2/5 rounded"
         height={575}
         width={374}

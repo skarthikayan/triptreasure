@@ -1,7 +1,11 @@
 import { NavLink, Link } from "react-router-dom";
+
 import Logo from "../assets/logo.svg?react";
+
 import HamburgerMenu from "./HamburgerMenu";
 import Button from "./Button";
+
+import appConstants from "../constants/appConstants";
 
 function Header() {
   const menuItems = [
@@ -22,7 +26,7 @@ function Header() {
         >
           <Logo />
           <span className="font-bold text-textTitle text-2xl">
-            Triptreasure
+            {appConstants.appTitle}
           </span>
         </Link>
         <ul className="lg:flex lg:flex-row hidden gap-5 font-bold items-center">

@@ -3,9 +3,7 @@ import Client from "../../assets/client.png";
 
 function Testimonial() {
   return (
-    <section
-      className={`  flex flex-col  w-full justify-between items-center  gap-10  px-4 py-8  overflow-visible relative`}
-    >
+    <section className="flex flex-col  w-full justify-between items-center  gap-10  px-4 py-8  overflow-visible relative">
       <Bg className="hidden sm:block absolute -top-80 w-full z-0" />
       <h1 className="text-sectionTitle sm:text-xl text-base font-bold tracking-wider">
         TESTIMONIALS
@@ -13,10 +11,9 @@ function Testimonial() {
       <h2 className="text-textTitle sm:text-4xl text-3xl font-bold leading-none">
         Trust our Clients
       </h2>
-      {/* <Client /> */}
       <img src={Client} alt="client image" height={128} width={128} />
       <p className="text-xl font-bold">
-        <span className="text-sectionTitle ">Mark Smith</span>{" "}
+        <span className="text-sectionTitle ">Mark Smith </span>
         <span>/ Travel Enthusiast</span>
       </p>
       <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
