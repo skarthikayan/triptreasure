@@ -36,7 +36,10 @@ function Services() {
       </div>
       <div className="flex sm:flex-row flex-col gap-4 overflow-hidden sm:p-8 p-0 z-10">
         {serviceList.map((service) => (
-          <Card className="flex flex-col items-center justify-evenly p-8 text-center border-colorGrey border-2 h-72 w-full sm:w-1/3 sm:h-96">
+          <Card
+            key={service.title}
+            className="flex flex-col items-center justify-evenly p-8 text-center border-colorGrey border-2 h-72 w-full sm:w-1/3 sm:h-96"
+          >
             {service.icon}
             <h3 className="text-textTitle font-bold">{service.title}</h3>
             <p>{service.desc}</p>

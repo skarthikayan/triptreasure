@@ -38,11 +38,12 @@ function TravelPoint() {
         <div className="flex lg:flex-row flex-col gap-4 w-full flex-wrap">
           {aminitiesList.map((aminity) => (
             <motion.div
+              key={aminity.title}
               onClick={() => toast.info(appConstants.buttonDisabledMessage)}
               whileHover={{ scale: 1.05 }}
               className="flex flex-col gap-4 items-center justify-center rounded-3xl shadow-lg  bg-white cursor-pointer p-8  border-colorGrey border-2 lg:min-w-52"
             >
-              <p className="font-bold text-orange-500 text-3xl">
+              <p className="font-bold text-orange-700 text-3xl">
                 {aminity.count}
               </p>
               <p className="text-black">{aminity.title}</p>

@@ -38,13 +38,17 @@ function Footer() {
         <div>
           <p className="text-black font-bold my-4">Company</p>
           {companyLinks.map((linkItem) => (
-            <p className="cursor-pointer hover:underline">{linkItem}</p>
+            <p key={linkItem} className="cursor-pointer hover:underline">
+              {linkItem}
+            </p>
           ))}
         </div>
         <div>
           <p className="text-black font-bold my-4">Blogs</p>
           {blogs.map((blog) => (
-            <p className="cursor-pointer hover:underline">{blog}</p>
+            <p key={blog} className="cursor-pointer hover:underline">
+              {blog}
+            </p>
           ))}
         </div>
         <div>

@@ -48,7 +48,7 @@ function Header() {
         <ul className="lg:flex lg:flex-row hidden gap-6 items-center">
           <li className="font-bold text-black p-4">
             <Link
-              className="block px-4 py-2"
+              className="px-4 py-2"
               to={`${import.meta.env.BASE_URL}/user?action=login`}
             >
               Login
@@ -56,12 +56,12 @@ function Header() {
           </li>
           <li>
             <Link
-              className="block px-4 py-2"
+              className="px-4 py-2"
               to={`${import.meta.env.BASE_URL}/user?action=signup`}
             >
               <Button
                 showDefaultPopup={false}
-                className="bg-buttonBg text-white "
+                className="bg-buttonBg text-white"
               >
                 Sign Up
               </Button>
