@@ -41,6 +41,7 @@ function Features() {
         <div className="flex lg:flex-col flex-col gap-4">
           {featureList.map((feature) => (
             <motion.div
+              key={feature.title}
               onClick={() => toast.info(appConstants.buttonDisabledMessage)}
               whileHover={{ scale: 1.05 }}
               className="flex lg:flex-row gap-4 max-w-xl items-center justify-start rounded-3xl shadow-lg  bg-white cursor-pointer p-8  border-colorGrey border-2"

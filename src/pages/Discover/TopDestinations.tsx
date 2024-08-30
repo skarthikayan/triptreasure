@@ -41,7 +41,10 @@ function TopDestinations() {
 
       <div className="flex lg:flex-row flex-col justify-start items-center lg:gap-28 gap-8 w-full  py-8 z-10">
         {destinationsList.map((destination) => (
-          <Card className="flex flex-col items-start justify-center  text-center ">
+          <Card
+            key={destination.title}
+            className="flex flex-col items-start justify-center text-center max-w-xs"
+          >
             <img
               alt={destination.title}
               src={destination.image}
@@ -54,7 +57,7 @@ function TopDestinations() {
                 <h3 className="text-textTitle font-bold text-left">
                   {destination.title}
                 </h3>
-                <p>{destination.location}</p>
+                <p className="text-left">{destination.location}</p>
                 <p>{destination.rating}</p>
               </div>
               <p className="text-sectionTitle font-bold">{destination.price}</p>

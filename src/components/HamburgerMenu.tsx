@@ -1,7 +1,10 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState, useRef } from "react";
-import HamburgerMenuIcon from "../assets/hamburger-menu.svg?react";
 import clsx from "clsx";
+import { motion, AnimatePresence } from "framer-motion";
+
+import HamburgerMenuIcon from "../assets/hamburger-menu.svg?react";
+
 import { useClickOutside } from "../hooks/useClickOutside";
 import Button from "./Button";
 
@@ -24,56 +27,67 @@ const HamburgerMenu = (props: Props) => {
         className="lg:hidden block"
         onClick={() => setShowNavMenu((prev) => !prev)}
       />
-      {showNavMenu && (
-        <div className="lg:hidden flex flex-col border-2 w-5/6 max-w-sm absolute right-0 top-20 z-10 bg-white shadow-sm items-start justify-evenly">
-          <ul className=" gap-5 font-bold items-center  w-full">
-            {menuItems.map((item) => (
-              <li key={item.label} className="p-4 border-b-2 text-left">
-                <NavLink
+      <AnimatePresence>
+        {showNavMenu && (
+          <motion.div
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 20, opacity: 0 }}
+            className="lg:hidden flex flex-col border-2 w-5/6 h-full max-w-sm fixed right-0 top-0 z-10 bg-white shadow-sm items-start justify-start"
+          >
+            <ul className="flex flex-row gap-8 items-center p-4 w-full justify-center border-b-2 ">
+              <li className="font-bold text-black">
+                <Link
+                  className="px-4"
                   onClick={() => setShowNavMenu(false)}
-                  end={true}
-                  to={item.route}
-                  className={({ isActive }) =>
-                    clsx("block", isActive && "text-black")
-                  }
+                  to={`${import.meta.env.BASE_URL}/user?action=login`}
                 >
-                  {item.label}
-                </NavLink>
+                  Login
+                </Link>
               </li>
-            ))}
-            <li className="p-4 border-b-2 text-left">
-              <a onClick={() => setShowNavMenu(false)} href={`#contact`}>
-                Contact Us
-              </a>
-            </li>
-          </ul>
-          <ul className="flex flex-row gap-8 items-center p-4 w-full justify-center">
-            <li className="font-bold text-black">
-              <Link
-                className="block px-4"
-                onClick={() => setShowNavMenu(false)}
-                to={`${import.meta.env.BASE_URL}/user?action=login`}
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="block px-4"
-                onClick={() => setShowNavMenu(false)}
-                to={`${import.meta.env.BASE_URL}/user?action=signup`}
-              >
-                <Button
-                  showDefaultPopup={false}
-                  className="bg-buttonBg text-white"
+              <li>
+                <Link
+                  className="px-4"
+                  onClick={() => setShowNavMenu(false)}
+                  to={`${import.meta.env.BASE_URL}/user?action=signup`}
                 >
-                  Sign Up
-                </Button>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+                  <Button
+                    showDefaultPopup={false}
+                    className="bg-buttonBg text-white"
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+              </li>
+            </ul>
+            <ul className=" gap-5 font-bold items-center  w-full">
+              {menuItems.map((item) => (
+                <li key={item.label} className="px-4 py-8 border-b-2 text-left">
+                  <NavLink
+                    onClick={() => setShowNavMenu(false)}
+                    end={true}
+                    to={item.route}
+                    className={({ isActive }) =>
+                      clsx("block", isActive && "text-black")
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
+              <li className="px-4 py-8 border-b-2 text-left">
+                <a
+                  className="block"
+                  onClick={() => setShowNavMenu(false)}
+                  href={`#contact`}
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
