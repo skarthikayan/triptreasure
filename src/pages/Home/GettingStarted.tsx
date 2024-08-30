@@ -1,6 +1,4 @@
-import { toast } from "react-toastify";
-
-import gettingStartedImage from "../../assets/getting-started.png";
+import gettingStartedImage from "../../assets/getting-started.webp";
 import Bg from "../../assets/getting-started-bg.svg?react";
 import Explore from "../../assets/explore.svg?react";
 import Play from "../../assets/play.svg?react";

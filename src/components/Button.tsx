@@ -3,6 +3,8 @@ import clsx from "clsx";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
+import appConstants from "../constants/appConstants";
+
 export interface Props {
   className: string;
   showDefaultPopup?: boolean;
@@ -15,9 +17,7 @@ const Button = ({
 }: PropsWithChildren<Props>) => {
   function handleClick() {
     if (showDefaultPopup) {
-      toast.info(
-        "This is just a mockup site demonstrating responsive web application. Button actions are disabled"
-      );
+      toast.info(appConstants.buttonDisabledMessage);
     }
   }
   return (

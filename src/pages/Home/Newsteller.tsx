@@ -1,5 +1,6 @@
 import Bg from "../../assets/newsteller-bg.svg?react";
 import Mail from "../../assets/mail.svg?react";
+
 import Button from "../../components/Button";
 
 function NewsTeller() {
