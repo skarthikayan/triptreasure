@@ -21,7 +21,7 @@ function TopDestinations() {
       rating: "4.5 ⭐",
     },
     {
-      title: " Mountain View, Above the cloud",
+      title: "Mountain View, Above the cloud",
       image: uaeImage,
       price: "$999",
       location: "United Arab Emeries",
